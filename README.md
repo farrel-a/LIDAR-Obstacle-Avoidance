@@ -15,8 +15,13 @@ The program was developed using ROS Noetic and Ubuntu 20.04 LTS. Try to use thes
 ```
 $ git clone https://github.com/farrel-a/LIDAR-Obstacle-Avoidance.git
 $ cd LIDAR-Obstacle-Avoidance
-$ cd lidar_ws
-$ catkin_make
+$ cd lidar_ws/src
+$ git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git -b noetic-devel
+$ git clone https://github.com/ROBOTIS-GIT/turtlebot3.git -b noetic-devel
+$ cd .. && catkin_make
+$ cd src
+$ git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git 
+$ cd .. && catkin_make
 $ source devel/setup.bash       #for bash
 # or
 $ source devel/setup.zsh        #for zsh
