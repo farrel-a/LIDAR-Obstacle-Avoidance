@@ -1,0 +1,9 @@
+<launch>
+    <node pkg="turtlebot3_movement" type="move_avoid_obstacle.py" name="robot_node" respawn="true" output="screen"/>
+    <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_world.launch">
+        <arg name="x_pos" value = "-2.0"/> 
+        <arg name="y_pos" value = "0.0"/> 
+    </include>
+
+    <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_gazebo_rviz.launch" />
+</launch>
